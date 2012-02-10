@@ -5,7 +5,7 @@ Status](https://secure.travis-ci.org/dmitriy-kiriyenko/Visitor.png)](http://trav
 
 Sometimes in Ruby you need to attach the same method to various spectre
 of classes. This is usually required for conversion methods when you
-define `#to_big_decimal` or `to_lua` on `Numeric`, `String`, `Object`,
+define `#to_big_decimal` or `#to_lua` on `Numeric`, `String`, `Object`,
 etc. While this way of doing things is the most Rubyish one, we don't
 like reopening core classes. More, there is also a problem on how to
 organize the code - by method or by class. Usually, as more natural, by
