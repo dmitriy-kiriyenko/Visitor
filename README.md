@@ -29,28 +29,44 @@ and added a convenient `add_accept_method!` method.
 
 ## Usage
 
-``` ruby class ToJsVisitor < Visitor::Base # Add Object#to_js as an
-accept method for this visitor add_accept_method! :to_js, :to =>
-[Object]
+``` ruby 
+class ToJsVisitor < Visitor::Base
+  # Add Object#to_js as an accept method for this visitor
+  add_accept_method! :to_js, :to => [Object]
 
-  visitor_for String do |string| if string =~ /`([^`]+)`/ $1 else
-"\"#{string}\"" end end
+  visitor_for String do |string|
+    if string =~ /`([^`]+)`/
+      $1
+    else
+      "\"#{string}\""
+    end
+  end
 
-  # This will capture all Numeric descendants # Even if Numeric was a
-module, being included to a class visitor_for Numeric do |number|
-number.to_s end
+  # This will capture all Numeric descendants
+  # Even if Numeric was a module, being included to a class
+  visitor_for Numeric do |number|
+    number.to_s
+  end
 
-  visitor_for NilClass do |_| 'undefined' end
+  visitor_for NilClass do |_|
+    'undefined'
+  end
 
-  visitor_for Enumerable do |array| "[#{array.map {|o| visit o}.join(",
-")}]" end
+  visitor_for Enumerable do |array|
+    "[#{array.map {|o| visit o}.join(", ")}]"
+  end
 
-  visitor_for Hash do |hash| "{#{hash.to_a.map{|key, value| "#{key}:
-#{visit value}"}.join(', ')}}" end
+  visitor_for Hash do |hash|
+    "{#{hash.to_a.map{|key, value| "#{key}: #{visit value}"}.join(', ')}}"
+  end
 
-  # This is kind of default visitor visitor_for Object do |o| o.to_s end
+  # This is kind of default visitor
+  visitor_for Object do |o|
+    o.to_s
+  end
 
-end ```
+end
+```
 
 This is the real code example from [to_js
 gem](https://github.com/dmitriy-kiriyenko/to_js).
