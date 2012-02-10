@@ -25,7 +25,10 @@ and added a convenient `add_accept_method!` method.
 
 ## Installation
 
-``` ruby # In your Gemfile gem 'visitor' ```
+``` ruby
+# In your Gemfile
+gem 'visitor'
+```
 
 ## Usage
 
