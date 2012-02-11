@@ -89,14 +89,14 @@ gem](https://github.com/dmitriy-kiriyenko/to_js).
 * Bring your testimony on why visitors in Ruby suck and are totally
   unnecessary
 
+## Tests
+* Run with `rake`
+* Tested in 1.8.7, 1.9.2, 1.9.3. Thank you,
+  [travic-ci](http://travis-ci.org/) guys, you are awesome.
+
 ## Licence
 [MIT](https://github.com/dmitriy-kiriyenko/Visitor/blob/master/MIT-LICENCE)
 ([more about it](http://en.wikipedia.org/wiki/MIT_License))
-
-## Tests
-* Run with rake
-* Tested in 1.8.7, 1.9.2, 1.9.3. Thank you,
-  [travic-ci](http://travis-ci.org/) guys, you are awesome.
 
 ## Credits
 * [Aaron "Tendelove" Patterson](https://github.com/tenderlove) with [The
