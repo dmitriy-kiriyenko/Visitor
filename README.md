@@ -1,7 +1,7 @@
 # Visitor
 
 [![Build
-Status](https://secure.travis-ci.org/dmitriy-kiriyenko/Visitor.png)](http://travis-ci.org/dmitriy-kiriyenko/Visitor)
+Status](https://secure.travis-ci.org/dmitriy-kiriyenko/Visitor.png)](http://travis-ci.org/dmitriy-kiriyenko/Visitor) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/dmitriy-kiriyenko/Visitor)
 
 Sometimes in Ruby you need to attach the same method to various spectre
 of classes. This is usually required for conversion methods when you
